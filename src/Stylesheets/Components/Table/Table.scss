@@ -1,0 +1,7 @@
+@import "../../import";
+
+.spreadsheet--table {
+    .table-row {
+        @include fbox(row);
+    }
+}

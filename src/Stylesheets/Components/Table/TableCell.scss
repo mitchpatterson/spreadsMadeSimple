@@ -1,0 +1,38 @@
+@import "../../import";
+
+.table-cell {
+    position: relative;
+    height: $cellHeight;
+    width: $cellWidth;
+
+    input {
+        height: $cellHeight;
+        width: $cellWidth;
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+        border-radius: 0;
+        border: 1px solid lightgrey;
+    }
+
+    .table-cell-icon {
+        position: absolute;
+        right: 3px;
+        top: 3px;
+        height: $cellHeight;
+        width: 20px;
+
+        &:hover {
+            cursor: pointer;
+            svg {
+                fill: $colorTurquoise;
+            }
+        }
+    }
+
+    &.show {
+        input {
+            padding-right: 22px;
+        }
+    }
+}

@@ -1,0 +1,69 @@
+@import "../../import";
+
+$isolatedLeftColumnWidth: 50px;
+
+.spreadsheet {
+    height: calc(100vh - #{$headerHeight});
+    width: 100%;
+    overflow: auto;
+    background-color: lightgray;
+
+    .spreadsheet-icon {
+        box-sizing: border-box;
+        height: $cellHeight;
+    }
+
+    .spreadsheet--columns {
+        @include fbox(row);
+        margin-left: $isolatedLeftColumnWidth;
+
+        .spreadsheet--cell {
+            border-right: 0;
+            flex-shrink: 0;
+            &:last-child {
+                border-right: 2px solid black;
+            }
+        }
+
+        svg {
+            cursor: pointer;
+            height: $cellHeight;
+            width: 20px;
+            transform: translate(-25%, 0);
+            
+            &:hover {
+                fill: $colorCrimson;
+            }
+        }
+    }
+    .spreadsheet--rows-and-table {
+        @include fbox(row);
+        width: 100%;
+        .spreadsheet--rows {
+            width: $isolatedLeftColumnWidth;
+            .spreadsheet--cell {
+                flex-shrink: 0;
+                border-bottom: 0;
+                width: $isolatedLeftColumnWidth;
+                &:last-child {
+                    border-bottom: 2px solid black;
+                }
+            }
+
+            svg {
+                cursor: pointer;
+                height: 20px;
+                width: 50px;
+                transform: translate(0, -25%);
+
+                &:hover {
+                    fill: $colorCrimson;
+                }
+            }
+        }
+
+        .spreadsheet--table {
+            width: calc(100% - #{$isolatedLeftColumnWidth});
+        }
+    }
+}

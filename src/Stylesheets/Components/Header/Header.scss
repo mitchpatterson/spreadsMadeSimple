@@ -1,0 +1,26 @@
+@import "../../import";
+
+.spreadsheet--header {
+    height: $headerHeight;
+    width: 100%;
+    background-color: $colorDeepBlue;
+    
+    .header-branding {
+        padding: 20px 0 20px 20px;
+        border-bottom: 3px solid $colorTurquoise;
+        @include fbox(row, center);
+
+        svg {
+            height: 40px;
+            width: 40px;
+        }
+
+        p {
+            color: $colorTurquoise;
+            font-size: 30px;
+            font-weight: bold;
+            margin: 0;
+            padding-left: 10px;
+        }
+    }
+}

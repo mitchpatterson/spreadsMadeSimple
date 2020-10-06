@@ -1,0 +1,10 @@
+@import "../../import";
+
+.spreadsheet--cell {
+    box-sizing: border-box;
+    height: $cellHeight;
+    width: $cellWidth;
+    border: 2px solid black;
+    background-color: $colorTurquoise;
+    @include fbox(row, center, center);
+}
